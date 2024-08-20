@@ -49,9 +49,9 @@ namespace FontStashSharp.RichText
 		}
 #endif
 
-		public void Draw(FSRenderContext context, Vector2 position, Color color)
-		{
-			context.DrawImage(Texture, Region, position, Scale, Color.White);
+		public void Draw(FSRenderContext context, Vector2 position, Color color) {
+			float alpha = color.A / 255f;
+			context.DrawImage(Texture, Region, position, Scale, new Color(alpha, alpha,alpha,0));
 		}
 	}
 }
