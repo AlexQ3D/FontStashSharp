@@ -21,7 +21,7 @@ namespace FontStashSharp.RichText
 			_width = width;
 		}
 
-		public override void Draw(FSRenderContext context, Vector2 position, Color color)
+		public override void Draw(FSRenderContext context, Vector2 position, Color color, TextLine line)
 		{
 		}
 	}

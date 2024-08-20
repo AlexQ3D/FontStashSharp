@@ -28,9 +28,9 @@ namespace FontStashSharp.RichText
 			_renderable = renderable;
 		}
 
-		public override void Draw(FSRenderContext context, Vector2 position, Color color)
+		public override void Draw(FSRenderContext context, Vector2 position, Color color, TextLine line)
 		{
-			_renderable.Draw(context, position, color);
+			_renderable.Draw(context, position, color, line);
 		}
 	}
 }

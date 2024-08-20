@@ -49,9 +49,15 @@ namespace FontStashSharp.RichText
 		}
 #endif
 
-		public void Draw(FSRenderContext context, Vector2 position, Color color) {
+		public void Draw(FSRenderContext context, Vector2 position, Color color, TextLine currentLine) {
+			// AQ: Update so we use the passed colors alpha w/o tinting
 			float alpha = color.A / 255f;
-			context.DrawImage(Texture, Region, position, Scale, new Color(alpha, alpha,alpha,0));
+			
+			// AQ: adjust the positioning so the sprite is centered
+			float yOffset = Size.Y / 2f;
+			position.Y += -currentLine.Size.Y/2f + yOffset/2f;
+			
+			context.DrawImage(Texture, Region, position, Scale, new Color(alpha, alpha,alpha, alpha));
 		}
 	}
 }

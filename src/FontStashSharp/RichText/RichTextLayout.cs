@@ -392,7 +392,7 @@ namespace FontStashSharp.RichText
 						chunkColor = chunk.Color.Value;
 					}
 
-					chunk.Draw(_renderContext, pos + new Vector2(0, chunk.VerticalOffset), chunkColor);
+					chunk.Draw(_renderContext, pos + new Vector2(0, chunk.VerticalOffset), chunkColor, line);
 					pos.X += chunk.Size.X;
 				}
 

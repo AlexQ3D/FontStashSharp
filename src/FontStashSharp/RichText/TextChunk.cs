@@ -116,7 +116,7 @@ namespace FontStashSharp.RichText
 			return i;
 		}
 
-		public override void Draw(FSRenderContext context, Vector2 position, Color color)
+		public override void Draw(FSRenderContext context, Vector2 position, Color color, TextLine line)
 		{
 			context.DrawText(Text, Font, position, color, Style, Effect, EffectAmount);
 		}

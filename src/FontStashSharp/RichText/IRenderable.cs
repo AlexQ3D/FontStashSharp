@@ -16,6 +16,6 @@ namespace FontStashSharp.RichText
 	{
 		Point Size { get; }
 
-		void Draw(FSRenderContext context, Vector2 position, Color color);
+		void Draw(FSRenderContext context, Vector2 position, Color color, TextLine line);
 	}
 }

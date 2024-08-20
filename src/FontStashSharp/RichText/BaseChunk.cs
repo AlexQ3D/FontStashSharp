@@ -23,6 +23,6 @@ namespace FontStashSharp.RichText
 		{
 		}
 
-		public abstract void Draw(FSRenderContext context, Vector2 position, Color color);
+		public abstract void Draw(FSRenderContext context, Vector2 position, Color color, TextLine currentLine);
 	}
 }
