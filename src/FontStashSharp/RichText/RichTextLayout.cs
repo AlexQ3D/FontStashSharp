@@ -64,6 +64,11 @@ namespace FontStashSharp.RichText
 			}
 		}
 
+		public void Refresh() {
+			InvalidateLayout();
+			InvalidateMeasures();
+		}
+
 		public int VerticalSpacing
 		{
 			get
