@@ -55,7 +55,7 @@ namespace FontStashSharp.RichText
 			
 			// AQ: adjust the positioning so the sprite is centered
 			float yOffset = Size.Y / 2f;
-			position.Y += -currentLine.Size.Y/2f + yOffset/2f;
+			position.Y += -currentLine.Size.Y/2f + yOffset/2f + 1; // +1 is bad and dumb. sorrryyyyyyyy!!!!!
 			
 			context.DrawImage(Texture, Region, position, Scale, new Color(alpha, alpha,alpha, alpha));
 		}
