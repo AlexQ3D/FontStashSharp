@@ -3,6 +3,7 @@ using System.Text;
 using System;
 using FontStashSharp.Interfaces;
 using System.Linq;
+using SDL2;
 
 #if MONOGAME || FNA
 using Microsoft.Xna.Framework;
@@ -79,6 +80,7 @@ namespace FontStashSharp
 
 			while (true)
 			{
+
 				int codepoint;
 				if (!source.GetNextCodepoint(out codepoint))
 					break;

@@ -49,6 +49,7 @@ namespace FontStashSharp.RichText
 		}
 #endif
 
+		public static bool ApplyTintToSprites = true;
 		public void Draw(FSRenderContext context, Vector2 position, Color color, TextLine currentLine) {
 			// AQ: Update so we use the passed colors alpha w/o tinting
 			float alpha = color.A / 255f;
@@ -57,7 +58,10 @@ namespace FontStashSharp.RichText
 			float yOffset = Size.Y / 2f;
 			position.Y += -currentLine.Size.Y/2f + yOffset/2f + 1; // +1 is bad and dumb. sorrryyyyyyyy!!!!!
 			
-			context.DrawImage(Texture, Region, position, Scale, new Color(alpha, alpha,alpha, alpha));
+			if (ApplyTintToSprites)
+				context.DrawImage(Texture, Region, position, Scale, new Color(color.R, color.G, color.B, color.A));
+			else
+				context.DrawImage(Texture, Region, position, Scale, new Color(color.A, color.A, color.A, color.A));
 		}
 	}
 }
